@@ -30,8 +30,10 @@ It provides a central “X” skip button overlay that users can tap to exit the
    ```groovy
    implementation "androidx.media3:media3-exoplayer:1.1.0"
    implementation project(path: ":media-launcher")
+   ```
 
-	2.	Create your own ad activity:
+2.Create your own ad activity:
+```kotlin
 
 class MediaLauncherAppActivity : MediaLauncherActivity() {
     override fun getVideoUri(): Uri =
@@ -48,3 +50,4 @@ class MediaLauncherAppActivity : MediaLauncherActivity() {
 	3.	From your main activity, launch it with:
 
 startActivity(Intent(this, MediaLauncherAppActivity::class.java))
+```
