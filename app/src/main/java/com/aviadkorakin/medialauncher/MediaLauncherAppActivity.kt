@@ -8,8 +8,6 @@ import androidx.core.net.toUri
 class MediaLauncherAppActivity : MediaLauncherActivity() {
 
     override fun getVideoUri(): Uri {
-        // Example: Load a video from the raw resource directory.
-        // Make sure you have a video file (e.g., intro_video.mp4) in res/raw.
         return "android.resource://$packageName/${R.raw.intro_video}".toUri()
     }
 
