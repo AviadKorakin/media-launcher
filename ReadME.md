@@ -24,15 +24,7 @@ It provides a central “X” skip button overlay that users can tap to exit the
 - **Progress indicator**: circular bar updated every 250 ms.  
 - **Reward flow**: post‑ad callback logic for retry or reward actions.
 
-### Getting Started
-
-1. Add the library module (or artifact) to your Gradle setup:  
-   ```groovy
-   implementation "androidx.media3:media3-exoplayer:1.1.0"
-   implementation project(path: ":media-launcher")
-   ```
-
-2.Create your own ad activity:
+### Create your own ad activity
 ```kotlin
 
 class MediaLauncherAppActivity : MediaLauncherActivity() {
