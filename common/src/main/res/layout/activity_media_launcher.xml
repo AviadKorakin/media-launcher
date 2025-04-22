@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Media3 PlayerView filling the whole screen without controls and stretched -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:resize_mode="zoom"
+        app:use_controller="false" />
+
+    <!-- FrameLayout in the top left for circular progress with an X icon -->
+    <FrameLayout
+        android:id="@+id/skip_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp">
+
+        <!-- Circular progress indicator (Material3) with black track & white indicator -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/circular_progress"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            app:indicatorSize="32dp"
+            app:trackThickness="2dp"
+            android:indeterminate="false"
+            app:indicatorColor="@android:color/white"
+            app:trackColor="@android:color/black" />
+
+        <!-- X icon overlaid at center (24 x 24 dp) -->
+        <ImageView
+            android:id="@+id/iv_skip"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_close"
+            android:contentDescription="@string/skip_video"
+            app:tint="@android:color/white" />
+    </FrameLayout>
+</RelativeLayout>
