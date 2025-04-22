@@ -14,8 +14,6 @@ It provides a central “X” skip button overlay that users can tap to exit the
   A base `AppCompatActivity` that sets up edge‑to‑edge insets, initializes ExoPlayer, displays a circular progress bar, and wires up a central skip (“X”) button.  
 - **MediaLauncherAppActivity**  
   Your subclass: override `getVideoUri()` to point at your ad, and `getVideoPlaybackCallback()` to handle “completed” or “interrupted” events.  
-- **RewardActivity**  
-  Shows dynamic messaging (“Great job” vs “Uh oh!”) with a fade‑in animation, and lets the user either “Try Again” or “Cash Out.”
 
 ### Features
 
